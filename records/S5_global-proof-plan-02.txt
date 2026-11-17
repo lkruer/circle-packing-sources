@@ -1,0 +1,54 @@
+Current goal: 6f2b8538-a79b-4f5e-b080-9f610937ebde; attempt A0053, successor A0064.
+Time carry remains 2302 predecessor seconds; total cap remains 28800 seconds.
+
+New self-contained route, pending COMPLETE exact certificate generation and replay:
+
+1. It suffices to rule out any 15 centers in the closed rho_star disk with ALL
+pairwise distances strictly greater than 2. Any alleged smaller container can be
+uniformly expanded to rho_star, making every distance strict. This handles the
+sharp equality case without needing to vary rho in the certificate.
+
+2. Among strict feasible arrangements at rho_star, maximize the integer number m
+of centers on the boundary. This maximum exists without a compactness assumption:
+the set of attained integers is a nonempty finite subset of {0,...,15}. At least
+one boundary center can always be obtained by moving a farthest center radially out.
+The largest interior radius s cannot be >=D=rho_star-4/rho_star. If it were, moving
+it to the boundary preserves strict distances to all interior centers by direct
+expansion of squared distances. For boundary centers, C(s)<=C(rho_star) on [D,rho),
+and strict prior separation makes the replacement strict as well. This increases m.
+Thus every interior radius is <D. Eleven boundary centers cannot fit: asin(t) >
+t+t^3/6 and 11*(1/rho_star+1/(6*rho_star^3))>pi. Hence 1<=m<=10.
+
+3. Enumerate EVERY binary circular order with k=15-m inner centers, k=5,...,14.
+There are 1139 representatives under rotation and reflection. This removes the
+saved predecessor's reliance on the known N=9 packing theorem. All counts m<=6
+were also exhausted in the floating probe (379 additional representatives).
+
+4. Each radial box has exact rational endpoints. Boundary radii are relaxed into
+a rigorously verified interval [RHO_LO,RHO_UP] containing rho_star. Inner radii lie
+in [0,D_UP], with D_UP=RHO_UP-4/RHO_UP. Pair radial sums >=2 give further necessary
+lower bounds. A split covers both halves exactly. Exclusion certificates are either
+radial contradictions or a positive directed angular cycle. Each recorded rational
+angular bound is verified by an EXACT degree-42 cosine lower polynomial, using
+integer arithmetic and a scale 2^192. No float or transcendental evaluator is
+needed by the verifier. Machin-series bounds verify pi, and integer square-root
+intervals verify all algebraic constants. Every tree node is visited, and no leaf
+may be silently dropped.
+
+5. The sole sharp order has two boundary centers between successive inner centers.
+The analytic odd-cycle inequality in local-balanced-inequality-01.txt shows that
+if all five inner radii lie within 1/100 of a=csc(pi/5), they must equal a, and the
+packing has the classical contacts. This neighborhood has no strictly feasible
+arrangement. The certificate may stop a box only when its FULL radial intervals
+lie inside that rigorously defined neighborhood. All other boxes need exact cycles.
+
+The first twenty exact case certificates have independently replayed successfully
+with the standard-library-only verifier. The floating balanced search with the
+analytic neighborhood covered its full root box in 22.6 seconds; this is motivation,
+not the needed final arithmetic evidence.
+
+Unresolved gap at this checkpoint: all remaining exact certificates must be produced,
+verified and audited, and the full mathematical argument assembled and checked.
+No full outcome is claimed yet. No shared pool, repository, reservation or sidebar
+state was changed.
+

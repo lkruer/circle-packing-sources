@@ -1,0 +1,24 @@
+A0053: failed scalar-shadow inequality, preserved to avoid reusing a false claim
+
+At fixed rho, a point of radius r forbids boundary-center angles within
+b(r)=acos((rho^2+r^2-4)/(2rho*r)) of its ray, when the arccos argument is <1.
+With alpha=asin(1/rho), a tempting necessary angular excess potential is
+sum max(2b(r_i)-2alpha,0) for five inner centers separated by at least 2.
+The conjectured lower bound 2pi-20alpha is FALSE. A numerical feasible inner
+configuration (shadow-probe-5.json) has four radii essentially
+E=sqrt(rho^2-1)-sqrt(3)=1.6443311129 and one radius about 1.9248729.
+Its potential is 0.35800285, less than the classical pentagon's 0.52430612.
+The experiment is a counterexample to this proposed relaxed inequality,
+not a packing of all fifteen disks. The phase of the outer angular positions
+is indispensable; scalar total shadow length loses that information.
+
+A different relaxation for five inner centers with exactly two boundary
+centers between successive inner rays has edge cost
+max{acos((r^2+s^2-4)/(2rs)), b(r)+b(s)+2alpha}.
+Numerical minimization on r_i in [E,D] repeatedly finds the classical
+pentagon as the minimum, summing to 2pi. On the larger range [rho-2,D],
+the same relaxation fails: three radii rho-2 and two about 2.14158317 give
+sum 5.8721576754<2pi. The invalidating issue is that shadows shorter than
+alpha do not enforce separation across neighboring allowed arcs. None of
+these experiments proves an inequality for all actual packings.
+

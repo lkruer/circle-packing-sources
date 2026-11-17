@@ -1,0 +1,37 @@
+{
+  "title": "Packing fifteen equal circles in a circle",
+  "author": "Grant Huffman",
+  "email": "huffma97@purdue.edu",
+  "ai_assistance": "OpenAI Codex",
+  "original_declaration": "SquarePacking.least_fifteen_circle_packing_in_circle",
+  "proved_declaration": "FifteenCirclesInACircle.least_fifteen_circle_packing_in_circle",
+  "formal_conjectures_commit": "89294ea02bd7cd678d59984add52cb4baef3dbf4",
+  "original_source_sha256": "07e73010036344ff3184c712a9d23e044e7f93d02ceb1b6389e508dd64e58868",
+  "lean_version": "4.33.1",
+  "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "compiler_exit_code": 0,
+  "compiled_at_utc": "2026-10-06T10:41:38.2866158Z",
+  "axiom_audit_passed": true,
+  "final_theorem_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound",
+    "FifteenCirclesInACircle.savedSerializedForestCheck_valid._native.native_decide.ax_1",
+    "FifteenCirclesInACircle.wordCoverageAllCheck_verified._native.native_decide.ax_1"
+  ],
+  "compiled_evaluation_checks": 2,
+  "certificate_cases": 1139,
+  "binary_words_checked": 32768,
+  "files": {
+    "lean/FifteenCirclesInACircle.lean": "fd00672f6807ef25be47f74efa690c593fe20d4d21624e4a4300fbdd58f5867a",
+    "paper/FifteenCirclesInACircle.tex": "94928656d709c2901b8b1af21bc88010aabcb7ed232497d990146b8fd7cf3475",
+    "pdf/FifteenCirclesInACircle.pdf": "f31cd1b94a2aeeece38e421defc6d0f3a6d0e772fa1cd6da3f64685b423a6fdc",
+    "README.md": "8d6900c44f0b8c29ae1fcc0fa576aec0be5ae359ef39f93581515ccd00c2f91c",
+    "supplement/fifteen-circle-packing-proof-bundle.zip": "f8a5d8bba358237d0b7ab013c43b695f306da00c3818a9469a0135188624e948"
+  },
+  "paper_pages": 9,
+  "paper_all_pages_visually_reviewed": true,
+  "paper_pdf_renderer": "local MathJax 3.2.2 SVG and existing headless Edge",
+  "latex_source_compilation_verified": false
+}
+

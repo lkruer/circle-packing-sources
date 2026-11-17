@@ -1,0 +1,215 @@
+[
+  {
+    "id": "S1",
+    "title": "Fifteen circle manuscript",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/ghuffy-fca-261007/tree/workspaces/A0064/output/paper/FifteenCirclesInACircle.tex",
+    "note": "Grant Huffman's manuscript. Construction, strict dilation, maximal boundary normalization, angular certificates, the odd cycle lemma and reported Lean formalization. Use this for the fifteen circle geometry and theorem statement.",
+    "copy": "manuscripts/fifteen-circles/FifteenCirclesInACircle.tex"
+  },
+  {
+    "id": "S2",
+    "title": "Four case manuscript",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/b765aada1cb0a762/circle-packings-16-19.tex",
+    "note": "October 8 working draft by Jensen Kohlmeyer, Grant Huffman, Will Howe and Liam Kruer. Covers 16, 17, 18 and 20 despite its older filename. Sections 2 through 7 supply the geometric reductions, exact constructions, local arguments, joint cycle bounds and totals.",
+    "copy": "manuscripts/sixteen-to-twenty-circles/circle-packings-16-19.tex"
+  },
+  {
+    "id": "S3",
+    "title": "Failed angular shadow inequality",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/ghuffy-fca-261007/tree/project/attempts/A0053/shadow-inequality-failure.txt",
+    "note": "Saved mathematical failure report. The scalar potential gives about 0.35800285 against a proposed lower bound about 0.52430612. Preserve its five point experimental scope.",
+    "copy": "records/S3_shadow-inequality-failure.txt"
+  },
+  {
+    "id": "S4",
+    "title": "Numerical counterexample coordinates",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/ghuffy-fca-261007/tree/project/attempts/A0053/shadow-probe-5.json",
+    "note": "Original five center numerical test. The recorded constraint violation is about 4e-11. Display it as the numerical test that undermined the proposed bound. The full fifteen circle optimality claim is separate.",
+    "copy": "records/S4_shadow-probe-5.json"
+  },
+  {
+    "id": "S5",
+    "title": "Fifteen circle revised proof plan",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/ghuffy-fca-261007/tree/workspaces/A0064/work/attempt/global-proof-plan-02.txt",
+    "note": "The saved transition to strict separation, full boundary count coverage, 1,139 circular orders, exact rational certificates and an analytic equality neighborhood.",
+    "copy": "records/S5_global-proof-plan-02.txt"
+  },
+  {
+    "id": "S6",
+    "title": "Sixteen circle search history",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/22f83a8ac82b3195/GLOBAL_METHOD.md",
+    "note": "The depth 8, 16 and 24 passes remove 1,230, 802 and 113 orders. The last order closes through a local theorem. Full saved forest has 2,146 orders and 312,728 nodes.",
+    "copy": "records/S6_GLOBAL_METHOD.md"
+  },
+  {
+    "id": "S7",
+    "title": "Fifteen circle odd cycle argument",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/ghuffy-fca-261007/tree/workspaces/A0064/work/attempt/local-balanced-inequality-01-draft.txt",
+    "note": "Development draft of the two local angular bounds, z_i = x_i + x_(i+1), odd cycle recovery identity and quadratic remainder control. Final form is in S1.",
+    "copy": "records/S7_local-balanced-inequality-01-draft.txt"
+  },
+  {
+    "id": "S8",
+    "title": "Seventeen circle local improvements",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/fd5837cba24ac2b7/GLOBAL_METHOD.md",
+    "note": "Documents the baseline radial tolerance 1/10,000, later 1/550 direct polar profile and both weak orders of the two equal angle centers. Final forest has 2,492 orders and 8,529,090 nodes.",
+    "copy": "records/S8_GLOBAL_METHOD.md"
+  },
+  {
+    "id": "S8b",
+    "title": "Seventeen circle direct dual refinement",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/7dfdee60c4891ab4/polar-dual-proof.txt",
+    "note": "Derives the separate radial row bounds and the contraction for the enlarged 1/550 neighborhood. Its immediate predecessor used 1/1,000.",
+    "copy": "records/S8b_polar-dual-proof.txt"
+  },
+  {
+    "id": "S9",
+    "title": "Eighteen circle movable boundary core",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/adfde9cad2b01160/local-proof.txt",
+    "note": "Removes the movable boundary circle from the argument and controls a seventeen center core. Includes the support bound controlling the extra center near the origin and the allowed mode enumeration.",
+    "copy": "records/S9_local-proof.txt"
+  },
+  {
+    "id": "S9b",
+    "title": "Eighteen circle complete argument",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/a4b0b665430a8aef/proof.txt",
+    "note": "Includes the five additional local templates, their contact structures and the full global exclusion.",
+    "copy": "records/S9b_proof.txt"
+  },
+  {
+    "id": "S10",
+    "title": "Twenty circle development and recorded completion",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/jk-pc-partials-20261008/tree/other-circle-packing/saved-files/e4c6c3a6613cdac2/STATUS.md",
+    "note": "Current completion paragraph followed by explicitly historical partial checkpoints. Supports 285 closed initial orders, unresolved pilot, stronger direct polar work, joint cycle introduction and final 54 blocks with 199,234,854 nodes. Use only the appropriate dated or labeled paragraph when showing progress.",
+    "copy": "records/S10_STATUS.md"
+  },
+  {
+    "id": "S11",
+    "title": "Construction coordinates and finite geometry checks",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/portfolio-collatz-261011/tree/portfolio/b1210c1c08c68db8/research-certificate.json",
+    "note": "data.circles contains points, labels, contact pairs and wall indices for 16, 17, 18 and 20. Values are numerical construction data. Use them to render the candidate pictures and cross check against S2. Global lower bound verification is outside this file's scope.",
+    "copy": "records/S11_research-certificate.json"
+  },
+  {
+    "id": "S12",
+    "title": "Fifteen circle archived build receipt",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/archive/ghuffy-fca-261007/tree/workspaces/A0064/output/verification.json",
+    "note": "Reports compiler exit 0, 1,139 certificate cases, 32,768 binary words and two native evaluation entries in the axiom audit. The source receipt is historical evidence.",
+    "copy": "records/S12_verification.json"
+  },
+  {
+    "id": "S13",
+    "title": "Hub status and review scope",
+    "url": "https://github.com/lkruer/collaboration-hub/blob/main/results/math/other/other-circle-packing/portfolio-circle-packings-20261011/README.md",
+    "note": "Import retains informational status with review none, identifies the manuscript as a working draft, and states the imported entry files alone omit the full dependency and certificate bundle. Independent replay was outside this script task.",
+    "copy": "records/S13_README.md"
+  },
+  {
+    "id": "A1",
+    "title": "U.S. Mint real photograph",
+    "url": "https://www.usmint.gov/news/coins-online/may-2026",
+    "note": "Use the Pile of 2026 Nickels photograph near How the Mint Mints the Money. Source credit United States Mint. Verify the specific image use terms during asset clearance."
+  },
+  {
+    "id": "A2",
+    "title": "David Wright real pipe photograph",
+    "url": "https://www.geograph.org.uk/photo/1871905",
+    "note": "Steel Pipes, Old Ferry Wharf, photographed 22 May 2010. Wikimedia Commons provides a 1000 by 779 original and the CC BY-SA 2.0 attribution. Credit David Wright / Geograph, CC BY-SA 2.0, and indicate any crop. At this resolution use a contained image with a slow crop, at most a brief shot."
+  },
+  {
+    "id": "A2b",
+    "title": "Pipe photo license and original download",
+    "url": "https://commons.wikimedia.org/wiki/File:Steel_Pipes,_Old_Ferry_Wharf_-_geograph.org.uk_-_1871905.jpg",
+    "note": "License page verified. Original photograph and photographer attribution are linked here."
+  },
+  {
+    "id": "A3",
+    "title": "Packomania equal circles table",
+    "url": "https://www.packomania.com/cci/cci.html",
+    "note": "Primary coordinate catalog. Screenshot the page title and rows 15 through 20. The page displays a December 25, 2024 update date. Treat that as the date of the displayed table."
+  },
+  {
+    "id": "A4",
+    "title": "Goldberg 1971 bibliographic page",
+    "url": "https://www.jstor.org/stable/2688222",
+    "note": "Packing of 14, 16, 17 and 20 Circles in a Circle, Mathematics Magazine 44, pages 134 to 139. The bibliographic record was located, while full page access was blocked. Use the Packomania page in A3 if the bibliographic page remains inaccessible."
+  },
+  {
+    "id": "A5",
+    "title": "Official Lean website",
+    "url": "https://lean-lang.org/",
+    "note": "Use the official page for a two to three second orientation shot when introducing Lean. Specific claims about this project's checks come from S12 and S10."
+  },
+  {
+    "id": "A6",
+    "title": "Nor's separate October 11 report",
+    "url": "https://nor-blog.pages.dev/posts/2026-10-11-circle-in-circle-packing-15-20/",
+    "note": "Primary public account dated October 11, 2026, reporting the same five packing sizes. Use the actual title, date and author. Discovery priority and independence remain unverified."
+  },
+  {
+    "id": "V1",
+    "title": "Liam Kruer channel reference",
+    "url": "https://www.youtube.com/watch?v=g-8AXtrqyxU",
+    "note": "The Toyota Way. Read the complete available auto caption transcript and sampled the page. Used its concrete question led opening, historical progression and closing return to the opening question as voice references."
+  },
+  {
+    "id": "V2",
+    "title": "Liam Kruer math explanation reference",
+    "url": "https://www.youtube.com/watch?v=qffg2WD3Gy8",
+    "note": "I Ranked Cars by Physics, Not Horsepower. Read the available auto captions and sampled the midpoint visual. Used its first person explanations, approachable definitions and numerical reveals."
+  },
+  {
+    "id": "V3",
+    "title": "Liam Kruer paced reveal reference",
+    "url": "https://www.youtube.com/watch?v=7eLlpAYYnl4",
+    "note": "The ACTUAL Cost of a Fast and Furious Car. Read the available auto captions and sampled the cost reveal. Used its direct delivery and incremental reveals. The new draft replaces the long clip lead in with an immediate geometric question."
+  },
+  {
+    "id": "H1",
+    "title": "Kravitz's 1967 cylinder-packing paper",
+    "url": "https://www.tandfonline.com/toc/umma20/40/2",
+    "note": "Sidney Kravitz, Packing Cylinders into Cylindrical Containers, Mathematics Magazine 40(2), 1967, pages 65–71, DOI 10.1080/0025570X.1967.11975768. The publisher issue page supplies the print year and article title. H5 discusses its role in the early literature. Use 1967 as historical context. The publisher's 2018 online date refers to digitization. Full original article access was unavailable during this revision."
+  },
+  {
+    "id": "H2",
+    "title": "Pirl's 1969 candidate and small-case work",
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mana.19690400110",
+    "note": "Udo Pirl, Der Mindestabstand von n in der Einheitskreisscheibe gelegenen Punkten, Mathematische Nachrichten 40, 1969, pages 111–124. The publisher metadata verifies the date. H7's author abstract records proofs through ten and conjectured configurations for eleven through nineteen. H5 reproduces the relevant candidate configurations and discusses the historical progression. The film uses 1969 as the conjecture baseline for fifteen and eighteen. Full original article access was unavailable during this revision."
+  },
+  {
+    "id": "H3",
+    "title": "Goldberg's 1971 candidate arrangements",
+    "url": "https://www.jstor.org/stable/i326664",
+    "note": "Michael Goldberg, Packing of 14, 16, 17 and 20 Circles in a Circle, Mathematics Magazine 44(3), May 1971, pages 134–139, DOI 10.1080/0025570X.1971.11976122. The journal issue identifies the title and print date. H5 section 2 records improvements for sixteen and seventeen and the twenty-circle construction. The seventeen candidate was later improved by Reis. Use 1971 for sixteen and twenty, yielding 55 years to the 2026 manuscripts. Full original article access was unavailable during this revision."
+  },
+  {
+    "id": "H4",
+    "title": "Reis's 1975 improved seventeen-circle packing",
+    "url": "https://www.tandfonline.com/doi/abs/10.1080/0025570X.1975.11976434",
+    "note": "George E. Reis, Dense Packing of Equal Circles Within a Circle, Mathematics Magazine 48(1), 1975, pages 33–37. The publisher record verifies its date. H5 section 2 attributes the improved seventeen-circle packing to this paper. Use 1975, yielding 51 years to the 2026 manuscripts. The publisher's 2018 online date refers to digitization. Full original article access was unavailable during this revision."
+  },
+  {
+    "id": "H5",
+    "title": "1998 research paper, historical figures and search methods",
+    "url": "https://mathweb.ucsd.edu/~ronspubs/98_01_circles.pdf",
+    "note": "R. L. Graham, B. D. Lubachevsky, K. J. Nurmela and P. R. J. Östergård, Dense packings of congruent circles in a circle, Discrete Mathematics 181, 1998, pages 139–154. Full text inspected from the author's university-hosted scan. Section 2 at printed page 140 surveys the earlier candidates. Figures 2 and 3 at printed pages 142–143 label the relevant packings conjecturally optimal. Sections 3.1 and 3.2 describe repulsion-force optimization and growing-disk billiards simulation. The eighteen-circle discussion explains the multiple equal-radius arrangements obtainable from nineteen. Use real figure/page crops and clearly labeled illustrative simulations."
+  },
+  {
+    "id": "H6",
+    "title": "2024 account of the established optimality results",
+    "url": "https://ijpam.uniud.it/online_issue/202451/10%20Ekanayake-LaFountain.pdf",
+    "note": "Dinesh B. Ekanayake and Douglas J. LaFountain, Tight partitions for packing circles in a circle, Italian Journal of Pure and Applied Mathematics 51, 2024, pages 115–136. The introduction on printed page 115 states that optimal radii had been proved for N at most 14 and N = 19. This paper provides another proof for fourteen. Use the dated 2024 statement to identify the five gaps below twenty-one at that time."
+  },
+  {
+    "id": "H7",
+    "title": "The 1999 proof for nineteen and its historical abstract",
+    "url": "https://link.springer.com/article/10.1023/A:1005091317243",
+    "note": "Ferenc Fodor, The Densest Packing of 19 Congruent Circles in a Circle, Geometriae Dedicata 74, January 1999, pages 139–145. The author's abstract records Pirl's 1969 proofs through ten and conjectured configurations for eleven through nineteen, the 1994 proof for eleven, and the present proof for nineteen. Together with H5's constructions, it supports the historical eighteen/nineteen comparison and the 1969 conjecture baseline."
+  },
+  {
+    "id": "H8",
+    "title": "Packing catalog with earlier candidate attributions",
+    "url": "https://erich-friedman.github.io/packing/cirincir/",
+    "note": "Erich Friedman's packing catalog credits the fifteen- and eighteen-circle constructions to Kravitz in 1967, sixteen and twenty to Goldberg in 1971, and seventeen to Reis in 1975. This earlier candidate attribution is documented in the production notes. The narrated age calculation consistently starts with the 1969 conjecture publication for fifteen and eighteen."
+  }
+]

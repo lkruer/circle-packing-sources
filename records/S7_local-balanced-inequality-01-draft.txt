@@ -1,0 +1,44 @@
+Candidate analytic lemma, independently derived after access repair.
+This lemma concerns five arbitrary inner radii in the balanced circular order;
+it does not assume equal radii or D5 symmetry. Its role in a full proof still requires
+rigorous exclusion of every radial box outside its neighborhood and all other orders.
+
+Let h=pi/5, a=csc(h)=sqrt(2+2/sqrt(5)), rho=rho_star, alpha=asin(1/rho),
+b(r)=acos((rho*rho+r*r-4)/(2*rho*r)), and
+c(r,s)=acos((r*r+s*s-4)/(2*r*s)). Put delta=1/100.
+Suppose the five inner radii r_i lie in [a-delta,a+delta], and the circular order
+has exactly two boundary centers of radius rho between each pair of successive
+inner centers. Let g_i be that successive inner angular gap. The all-pair constraints
+give both g_i>=c(r_i,r_{i+1}) and g_i>=b(r_i)+2*alpha+b(r_{i+1}).
+
+At r=s=a both lower bounds equal 2h, by the classical construction geometry.
+Write x_i=r_i-a and z_i=x_i+x_{i+1}. At (a,a), p=partial_r c(a,a)<-2/5,
+whereas q=b'(a)>2/5. On the full neighborhood, the Hessian of c has operator norm
+at most 1 and |b''|<6. Taylor's theorem consequently gives
+c(r_i,r_{i+1}) >= 2h+p*z_i - (x_i*x_i+x_{i+1}*x_{i+1})/2,
+b(r_i)+2alpha+b(r_{i+1}) >= 2h+q*z_i -3*(x_i*x_i+x_{i+1}*x_{i+1}).
+Taking the larger lower bound yields
+g_i >= 2h+(2/5)*|z_i|-3*(x_i*x_i+x_{i+1}*x_{i+1}).
+
+The odd cycle is decisive: 2*x_i = z_i-z_{i+1}+z_{i+2}-z_{i+3}+z_{i+4}.
+Thus sum|x_i| <= (5/2)*sum|z_i|, and since |x_i|<=delta,
+sum x_i*x_i <= (5*delta/2)*sum|z_i|. Summing the five gap bounds gives
+2*pi = sum g_i >= 2*pi + (2/5-15*delta)*sum|z_i|
+                     = 2*pi + (1/4)*sum|z_i|.
+Therefore every z_i=0 and, because the cycle is odd, every x_i=0.
+The inner radii are all exactly a. The gap constraints are then all equalities,
+forcing the classical angular gaps and pair tangencies. In particular this
+neighborhood admits no configuration whose ALL pairwise distances exceed 2.
+
+Explicit derivative bounds (to be checked algebraically in the eventual proof):
+The neighborhood lies inside r,s in [1.69,1.72], rho in [3.52,3.53].
+For C=(r*r+s*s-4)/(2*r*s), 0<C<.34, sin(c)>.94,
+|C_r|<.43, |C_rr|<.15, |C_rs|<.60. Hence |c_rr|<.25 and |c_rs|<.75,
+so the symmetric Hessian has operator norm at most 1.
+For B=(rho*rho+r*r-4)/(2*rho*r), 0<B<.96, sin(b)>.28,
+|B_r|<.28 and |B_rr|<.5. Thus |b''|<.5/.28+.96*.28*.28/(.28^3)<6.
+At a, p=-2/(a^3*sin(2h)); since a<1.705 and a^3<5, p<-2/5.
+Also B(a)>.9 gives sin(b(a))<.5, and -B_r(a)>.25 gives q>.5>2/5.
+All decimal endpoints above are terminating rationals, so these claims admit
+direct rational checks. The lemma is not yet being labeled a breakthrough or outcome.
+

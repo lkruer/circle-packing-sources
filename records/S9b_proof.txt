@@ -1,0 +1,289 @@
+EIGHTEEN UNIT DISKS IN A CIRCLE -- EXACT COMPUTER-ASSISTED PROOF
+============================================================
+
+The complete global forest, exact construction, normalization constants,
+auxiliary exclusion, and six local theorem families have been verified.
+Independent rational sine and cosine checkers have replayed every forest
+node. Source hashes remained unchanged during the final verification.
+
+Target theorem.  The least containing-circle radius for eighteen closed
+unit disks is R*=1+sqrt(6)+sqrt(2).
+
+1. Exact feasible construction
+------------------------------
+
+Write t=sqrt(3) and q=sqrt(6)+sqrt(2), so q^2=8+4t.  The eighteen
+center coordinates, in the labels used by Packomania's discovery data, are
+
+  1=(-1,-2-t),       2=(1,-2-t),
+  3=(-1-t,-1-t),    4=(1+t,-1-t),
+  5=(-1,-t),        6=(1,-t),
+  7=(-2-t,-1),      8=(2+t,-1),
+  9=(-2,0),        10=(2,0),
+ 11=(-2-t,1),      12=(2+t,1),
+ 13=(-1,t),        14=(1,t),
+ 15=(-1-t,1+t),    16=(1+t,1+t),
+ 17=(-1,2+t),      18=(1,2+t).
+
+The twelve outer centers form a regular dodecagon with neighboring
+distance 2 and radius q.  The remaining six form a regular hexagon of
+radius 2.  Exact expansion in Z[t], with t^2=3, gives thirty pairs at
+distance exactly 2 and every other pair at distance at least sqrt(8).
+All inner centers have squared norm 4, and all outer centers have squared
+norm 8+4t.  Therefore the eighteen unit disks fit in radius 1+q.
+
+geometry/candidate18.py checks the integer coefficient identities.
+geometry/audit_candidate18.py independently expands the squared-distance
+polynomials and proves strict noncontact inequalities with rational
+square-root bounds.  Neither checker trusts rounded discovery coordinates.
+
+2. Strict scaling and maximal-boundary normalization
+----------------------------------------------------
+
+If eighteen unit disks fit in radius R<R*, their center norms are at most
+R-1<q.  Feasibility of even two unit disks implies R>=2 by the triangle
+inequality, so R-1>0. Scale all centers about the container center by q/(R-1)>1.
+Their pair distances become strictly greater than 2 and their norms at
+most q.  It suffices to rule out this strict configuration.
+
+Among strict configurations in radius q, choose one with the greatest
+possible number b of centers on the boundary.  A maximizing value exists
+because the set of attained counts is a nonempty finite subset of
+{0,...,18}; no compactness assertion about the strict feasible set is
+needed.  Radial dilation until some center reaches q ensures b>=1.
+
+Let sv be a farthest interior center, with |v|=1 and s<q, and put
+D=q-4/q=2sqrt(2).  Suppose s>=D.  Replacing sv by qv preserves all strict
+pair inequalities.  For any interior center z, |z|<=s and
+
+ |qv-z|^2-|sv-z|^2
+   =(q-s)(q+s-2<v,z>) >= (q-s)^2 >0.
+
+For a boundary center z, |z|=q and
+
+ |qv-z|^2-4
+   =(q/s)(|sv-z|^2-4)+(q/s)(q-s)(s-D)>0.
+
+This raises b, a contradiction.  Thus every interior radius is less
+than D=2sqrt(2).  The algebraic identity qD=q^2-4 follows from
+sqrt(12)=2sqrt(3).
+
+There cannot be twelve boundary centers: two consecutive boundary rays
+would have angular gap alpha<=2pi/12=pi/6, and
+
+ |x-y|^2=2q^2(1-cos(alpha))
+      <=2(8+4sqrt(3))(1-sqrt(3)/2)=4,
+
+contradicting strict separation.  Hence b<=11.
+
+3. Auxiliary exclusion and the lower boundary count
+---------------------------------------------------
+
+Eleven strictly separated centers cannot lie in radius
+H=2.828427125>2sqrt(2).  Here is the complete auxiliary reduction.
+Normalize a strict eleven-center configuration by maximal boundary count,
+as in Section 2.  Its interior radii are at most delta=H-4/H<2.
+
+There are at most four interior centers.  If five nonzero rays occur,
+two consecutive rays have gap alpha<=2pi/5.  The squared chord is
+separately convex in its two radii, so its maximum over [0,delta]^2 is
+at a corner.  The corner values are 0, delta^2, and
+2delta^2(1-cos(alpha))<=delta^2 alpha^2.  Exact rational comparisons give
+delta^2<4 and delta^2(2pi_upper/5)^2<4.  This contradicts strict
+separation.  A center at the origin has distance less than 2 from every
+other interior center, so it cannot create an exception.
+
+There are at most eight boundary centers.  Nine would require
+9 asin(1/H)<pi.  The bound asin(x)>=x+x^3/6 and the exact inequality
+9(1/H+1/(6H^3))>pi_upper exclude them.  An eleven-center counterexample
+therefore has b=7 or b=8.  There are thirty circular binary words modulo
+rotations and reflection for these cases.  The auxiliary forest has
+76 nodes: 23 subdivisions and 53 exact angular-cycle leaves.  Every
+word is excluded, with no unresolved leaves.  Independent rational
+sine and cosine replays have checked this forest.
+
+At most ten of the eighteen normalized centers can consequently be
+interior: eleven of them would fit strictly inside radius D<H and
+contradict the auxiliary result.  We obtain 8<=b<=11.  Independent
+enumerations give 4863 possible dihedral words, distributed as follows:
+b=8:1282; b=9:1387; b=10:1282; b=11:912.
+
+4. Exact angular certificates
+-----------------------------
+
+List center rays in circular order.  For each pair i,j let r_i lie in
+a rational interval [l_i,u_i].  If t>=0 and all four radius corners
+satisfy r^2+s^2-2rs cos(t)<=4, separate convexity proves the same
+inequality throughout the rectangle.  Consequently strict pair distance
+greater than 2 requires both directed angular gaps between these rays
+to exceed t, whenever t>0.  A zero t supplies only the harmless lower
+bound zero; a center at the origin can be assigned any ray.
+
+An edge i->j imposes lifted-angle constraint
+alpha_j-alpha_i>t_ij-2pi*1_{j<i} for positive t_ij.  A directed cycle
+with sum(t_ij)>2pi times its winding contradicts the sum of these
+constraints.  The strict angle-sum inequality also makes zero t edges
+irrelevant to strictness.  All accepted cycle leaves use exact rational
+t with rational, downward cosine bounds or upward sine bounds.
+
+The global root radius box uses
+q in [3.86370330515627314,3.86370330515627315],
+boundary radii in that interval, and interior radii in
+[0,q_upper-4/q_upper].  These intervals include every configuration
+normalized in Section 2.  At each node, the triangle inequality can
+raise an interior lower radius to max_j(2-u_j), where j ranges over
+the other interior centers.  Empty resulting intervals are excluded.
+Otherwise a subdivision of one interior radius at its rational
+midpoint has two closed children covering the full parent.
+
+The search uses floating-point calculations only to propose directed
+cycles and choose splits.  It accepts a leaf only after exact rational
+checks.  The saved forest is subsequently replayed by independent
+checkers which rederive all boxes and enumerations.  Their sine and
+cosine Taylor bounds use different exact formulas.
+
+5. Local exclusion of the second critical family
+------------------------------------------------
+
+There is also a closed critical eighteen-center configuration with eleven
+boundary centers: add the origin to the hexagon-and-dodecagon packing,
+then remove one outer center.  A neighboring outer center is a rattler.
+Ignoring that rattler leaves a rigid seventeen-center stressed core with
+ten outer centers, six radius-two centers, and the origin.
+
+The41-by33Cartesian contact Jacobian of this core admits a strictly
+positive normalized stress and an independently certified left inverse.
+A direct stress-subtraction argument and exact weighted quadratic cube
+maxima prove local rigidity within coordinate tolerance1/80.  Its
+contraction constant is less than.950896.  Independent checkers use
+different radical-coordinate formulas and Gray-code versus recursive
+cube enumeration.  The entire proof is detailed in local/local-proof.txt.
+
+For six radial deviations at most eta=1/750, the16nonzero core centers
+are linked by a strongly connected
+directed contact graph.  Exact contact-angle derivative bounds and
+shortest paths give coordinate error less than.012363851<1/80.
+The seventh interior center need not be restricted further than its
+normalized radius bound Dhi. A regular radius-two hexagon has support
+at least sqrt(3) in every unit direction. Its six actual centers move
+at most7.6eta in Euclidean norm. Strict separation from a suitable
+inner center gives
+ |z|<(4eta+eta^2)/(2sqrt(3)-15.2eta-Dhi)<.00868<1/80.
+An independent cosine-cover argument also bounds |z| below.008757.
+Thus no subdivision is required for this center's radius in a local
+leaf. No angle restriction is imposed on it or the discarded rattler.
+Every insertion of those two centers preserves the active core contacts'
+wrap integers.  Rotations and reflection give25canonical words with58
+complete radial modes.  Independent insertion-based and deletion-based
+enumerations agree.  Thus any global box fitting one of these modes is
+excluded by the local core theorem, even though the boundary rattler can
+move.  This is a local exclusion argument, not a global uniqueness claim.
+
+6. Five additional full eighteen-center stressed templates
+---------------------------------------------------------
+
+The normalized interior bound D=2sqrt(2) also has closed critical limits
+with five radius-two centers, the origin, and one or two radius-D centers.
+These limits require their own local exclusions; the preceding six-inner
+core theorem does not cover them. Five exact templates suffice for the
+saved forest. Their coordinates lie in Z[sqrt(3)] and their feasibility
+and contact sets are checked exactly in geometry/critical_templates.py.
+
+The first template removes center6 from the nineteen-center dodecagon,
+hexagon, and origin configuration and replaces center2 by
+(sqrt(3)-1,-1-sqrt(3)). It has eleven wall contacts, five radius-two
+centers, one radius-D center, and the origin.
+
+The other templates have five radius-two rays whose angular gaps are
+either (90,90,60,60,60) degrees or (90,60,90,60,60) degrees. The radius-D
+centers occupy the midpoints of one or both90-degree gaps. The wall
+centers occupy the regular dodecagon rays15+30k degrees except the rays
+occupied by radius-D centers. Thus the one-D templates have eleven wall
+centers, and the two-D templates have ten. Exact tables and diagrams are
+in critical_templates_certificate.json and stressed_templates18.svg.
+
+Every one-D template has32 disk contacts and11 wall contacts; every
+two-D template has34 disk contacts and10 wall contacts. After fixing
+rotation, each Jacobian has35 free coordinates. For each augmented
+matrix M=[J,1], a rational36-by-m witness B satisfies ||I-BM||_infinity<1.
+The exact left inverse X=(BM)^(-1)B follows by the Neumann series. Its
+last row w satisfies wJ=0, sum(w)=1, and every w_i>0. The remaining
+rows P satisfy PJ=I and P1=0. Independent interval checks bound each
+entry of X about its rational witness.
+
+For perturbations u, strict disk separation gives
+ (Ju)_disk > -|u_i-u_j|^2,
+whereas the wall constraint gives (Ju)_wall >= |u_i|^2. Set
+S=sum_disk w_ij |u_i-u_j|^2. Since sum w_i(Ju)_i=0, the weighted
+positive and negative parts of Ju are equal and bounded by S. Subtracting
+a multiple of w from each row of P therefore gives
+ |u|_infinity <= kappa S,
+where kappa bounds the range of the ratios P_ik/w_k in every row.
+Separate convexity of the nonnegative weighted quadratic forms gives
+S<=T |u|_infinity^2, with T obtained by exact cube-vertex enumeration.
+The anchor x coordinate is zero; its y coordinate is safely permitted to
+vary in this bound. At epsilon=1/200, the five contraction coefficients
+kappa*T*epsilon are respectively below .360,.393,.660,.354,.552 for
+one_D, two_D, one_D_hybrid, two_D_separated, one_D_separated.
+Consequently no strict packing exists in any of these coordinate cubes.
+
+Each template's seventeen nonzero centers form a strongly connected
+directed minor-contact graph. For the contact angle
+ theta(r,s)=acos((r^2+s^2-4)/(2rs)),
+exact interval derivative bounds on the radial neighborhoods give
+uniform costs for the directed contact edges. Paths from and to the
+fixed wall anchor bound every angular deviation. The polar triangle
+inequality and unit-circle chord bound |v(alpha)-v(beta)|<=|alpha-beta|
+then give coordinate error at most .00356 at radial tolerance eta=1/1000,
+below epsilon=.005. The origin's radius is restricted to eta and its ray
+is arbitrary. No angular derivative at radius zero is used.
+
+Inserting the origin at every gap of the nonzero circular order preserves
+all active contact wrap integers. Enumerating every rotation and
+reflection produces complete radial modes for each template. Combined
+with the original rattler-core family, the independently bound union
+contains41 canonical words and138 modes. A local leaf uses one complete
+mode, with its own proven Cartesian theorem; conditions from different
+modes are never combined. These templates are certified limit exclusions,
+not a classification or uniqueness theorem for all optimal packings.
+
+7. Complete global assembly and conclusion
+-----------------------------------------
+
+The complete forest excludes all4863 possible words. It has8233519
+nodes:4114328 subdivisions,4117238 angular-cycle leaves, and1953 local
+leaves. There are no missing words or unresolved leaves. Independent
+sine and cosine checkers replayed every node and independently enumerated
+the expected word universe. Both full receipts bind the same forest hash:
+445f0d1543ab1bd1d8cd7d69aaa7b874aedcd4bc4a8393e0c4172d4a277e6743.
+
+The master verifier freshly checks19 construction, normalization, local,
+and auxiliary components before replaying the global forest. Its source
+hashes agree before and after the run. The cosine replay uses a separate
+checker source, exact formulas, and enumeration method. The local profile
+union is freshly reconstructed by an independent checker and is bound
+exactly to the forest's declared profile data.
+
+By Sections2 and3, every hypothetical smaller packing would produce a
+strict configuration in one of the4863 root boxes. Sections4--6 and the
+complete forest exclude every such configuration. Section1 supplies the
+matching feasible packing. Therefore the minimum container radius is
+exactly R*=1+sqrt(6)+sqrt(2).
+
+This establishes exact computer-assisted optimality. It does not assert
+uniqueness of optimal packings.
+
+The full Lean theorem EighteenCirclesInACircle.isLeast has now compiled
+with no remaining hypotheses and no sorryAx. It combines exact candidate
+feasibility, the normalization and complete order enumeration, sound
+angular-cycle and radial local exclusions, and the accepted finite forest.
+Its axiom audit records the standard three axioms and explicitly checked
+finite native_decide receipts. The common Lean source is
+../circle16_19/lean/EighteenCirclesInACircle.lean; its full compiler receipt
+is ../circle16_19/lean/certificates/eighteen_full_lean_verification.json.
+The fresh audit lean_final_verification.json binds 97 transitive workspace
+modules, their compiled binaries, and the native forest inputs, 284 files
+in total, to the same complete forest hash above.
+
+Discovery source: https://www.packomania.com/cci/txt/cci18.txt
+The discovery data select the construction but are not trusted proof inputs.

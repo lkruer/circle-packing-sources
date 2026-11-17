@@ -1,0 +1,126 @@
+LOCAL EXCLUSION OF THE EIGHTEEN-CENTER CRITICAL FAMILY
+===================================================
+
+The twelve-boundary construction of eighteen centers is not the only
+closed critical family.  Start instead with the nineteen-center packing
+of the outer dodecagon, inner hexagon, and origin.  Remove outer center1
+in the eighteen-center coordinate labels of geometry/candidate18.py,
+with the origin assigned additional label19.  Outer center2 becomes a
+rattler.  Remove it from the proof: the remaining seventeen-center core
+uses labels3 through19.  A strict eighteen-center configuration would
+give a strict configuration of this core, irrespective of the rattler.
+
+The core has31disk contacts and10wall contacts.  Its contact coordinates
+are exact radicals.  Rotate label4 to (0,-q), where q=sqrt(6)+sqrt(2).
+Delete its x coordinate from the displacement vector u, leaving33free
+Cartesian coordinates.  Define J with disk rows 2(p_i-p_j) in the
+appropriate coordinates and wall rows -2p_i.  There are41rows.  Let
+M=[J|1], and let B be the34-by41rational matrix in the witness file.
+
+Exact rational intervals give
+ ||I-BM||_infinity <6.855e-14.
+Thus X=(BM)^(-1)B is an exact left inverse of M, and every entry of X
+differs from the supplied rational B by less than1e-11.  Write X=[P;w].
+Then PJ=I, P1=0, wJ=0, w1=1, and every component of w is positive.
+The lower stress bound is greater than.01509463324297.
+
+Put xi=max|u_i|.  Disk feasibility says (Ju)_k>=-Q_k, where
+Q_k=|u_i-u_j|^2; wall feasibility says (Ju)_k>=|u_i|^2>=0.
+Multiplication by the positive stress gives weighted negative mass at
+most T xi^2.  The usual coefficient-oscillation argument yields
+xi<=kappa T xi^2, with kappa<18.389550501 and T<5.031943637.
+This proves rigidity for xi<=1/100 because kappa T/100<.925352.
+
+The stronger certificate subtracts stress directly.  For a row P_i,
+choose cmax>=max_k(P_ik/w_k) and cmin<=min_k(P_ik/w_k).  Since wJu=0,
+
+ u_i=sum_k(P_ik-cmax w_k)(Ju)_k
+    <=sum_disk(cmax w_k-P_ik)Q_k,
+ -u_i<=sum_disk(P_ik-cmin w_k)Q_k.
+
+Every coefficient in these sums is nonnegative.  Wall contributions
+are nonpositive in the upper bounds and can be dropped.  Bound each
+coefficient upward on a rational grid, then maximize the two weighted
+quadratic forms on their displacement cubes.  Separate convexity puts
+their maxima at vertices.  The anchored x coordinate is0; all others
+are +/-1.  For y, simultaneous sign reversal permits fixing the anchor
+sign to-1.  Each component therefore needs65536vertex checks.
+
+The maximum of all66bounds is C<76.071660297.  Hence
+xi<=C xi^2, and xi<=1/80 implies xi=0 because C/80<.950896.
+At u=0 all core disk contacts remain exactly2, so a strict core packing
+is impossible.  Primary Gray-code integer maxima have been checked
+independently by recursive vertex enumeration with reversed variable
+order.  The inverse certificate has also been audited using direct
+sqrt(2),sqrt(6) coordinate formulas, rather than sqrt(3) followed by
+an interval rotation.
+
+To reach the Cartesian neighborhood from polar boxes, restrict the
+six nonzero interior radii to[2-eta,2+eta], with eta=1/750. The seventh
+interior center initially has only the normalized radius bound Dhi,
+the global rational upper bound on2sqrt(2). Its angle is arbitrary.
+For the16nonzero core points,
+use the25oriented minor-angle contacts.  The contact-angle derivative
+with respect to an inner radius is less than3/10 on inner-inner edges
+and less than9/10 on mixed edges.  Both bounds have been proved on the
+entire radius intervals using two different exact formulas.
+
+The directed contact graph is strongly connected.  Anchor label4 and
+use exact shortest paths of derivative bounds.  Boundary angle changes
+are at most(12/5)eta and inner changes at most(33/10)eta.  The largest
+coordinate error is
+ q_upper(12/5)eta = .01236385057650007408... <1/80.
+
+The seventh center's radius need not be subdivided. The radius-two
+hexagon has a support vertex P in every direction z with
+P dot z >=sqrt(3)|z|. In coordinates, if |x|>=sqrt(3)|y| choose
+P=(2sign(x),0); otherwise choose P=(sign(x),sqrt(3)sign(y)). Squaring
+the nonnegative quantities proves the inequality in both cases.
+Rotation preserves it. The polar triangle inequality and unit-circle
+chord bound give Euclidean displacement of each actual inner center A
+from its template P at most E=(1+2*33/10)eta=7.6eta: explicitly,
+ |r u(theta+delta)-2u(theta)|<=|r-2|+2|delta|.
+Therefore A dot z >=(sqrt(3)-E)|z| for a suitable A.
+
+For d=|z|<=Dhi, strict separation from that A gives
+ d(2sqrt(3)-2E-d)<4eta+eta^2.
+The positive denominator2sqrt(3)-2E-Dhi bounds d above by
+ (4eta+eta^2)/(2sqrt(3)-2E-Dhi) <.00868<1/80.
+Using only component errors instead gives the weaker denominator
+2sqrt(3)-4E-Dhi and still bounds d below.00898<1/80. The exact
+checkers use the rational support lower bound1.732 whose square is
+less than3; both comparisons retain a strict rational margin.
+
+An independent angular argument also proves the necessary bound. The
+six template rays cover every direction withinpi/6; their deviations
+are at most3.3eta. Put alpha=pi_upper/6+3.3eta. Exact arithmetic gives
+1-alpha^2/2>43/50. A suitable actual inner ray therefore has cosine
+at least.86 against z. Strict separation then forces
+ d<(4eta+eta^2)/(2(2-eta)*.86-Dhi)<.008757<1/80.
+Neither argument restricts the angle of z.
+
+Thus every box fitting only the six radius-two conditions already
+lies in the stronger Cartesian neighborhood for all seventeen core
+centers. The wide profile gives typeO its own radius tolerance Dhi;
+its safe interval[-Dhi,Dhi] includes the entire normalized interior
+range[0,Dhi]. The verifier freshly proves the derived small coordinate
+bound, rather than assuming typeO is initially near the origin.
+
+The core circular order is
+3,5,6,4,8,10,12,16,14,18,17,13,15,11,9,7.
+Insert the unused boundary rattler in any cyclic gap, then insert the
+near-origin center in any gap.  Both insertions are allowed freely
+because the proof ignores the rattler and handles the origin without
+an angular constraint.  Every active nonzero core contact retains its
+lifted-angle wrap integer after cutting at anchor4.  Include rotations
+and reflection.  This gives25canonical circular words and58radial modes.
+Each mode assigns six interior positions typeA(radius2) and one typeO
+(radius0).  An independent audit derives the same modes by deleting a
+designated origin and one boundary position from each of the912possible
+boundary11words and comparing the surviving binary cycle with the core.
+
+The global checker accepts a local leaf only if one complete mode fits
+the propagated box.  It cannot combine different partial mode matches.
+The end-to-end verifier freshly recomputes the inverse, stress constants,
+quadratic maxima, bridge, and modes, then matches the forest's local
+metadata to these independently verified data.

@@ -1,0 +1,55 @@
+Direct-dual refinement of the direct-polar radial theorem
+========================================================
+
+This refinement uses the same candidate, exact polar Jacobian J, rectangular
+left inverse X=[P;w], fixed boundary radii, two candidate orders and contact
+Taylor formulas as polar-local-proof.txt. It replaces the common weighted
+negative-mass bound by a separate bound for each radial row. Its checker is
+polar_dual_local_check.py and its independent profile is
+polar_dual_radial_intervals.json. The original1/1000 profile is preserved.
+
+For radial row a choose exact rational outer bounds
+
+  cmax_a >= max_k(P_ak/w_k), cmin_a <= min_k(P_ak/w_k),
+
+using the interval enclosures of the exact left inverse. Positivity of every
+w_k implies cmax_a*w_k-P_ak>=0 and P_ak-cmin_a*w_k>=0.
+
+Let h=Jx. As before, sum w_k h_k=0 and feasibility gives
+h_k>=R_k>=-B_k*eta_actual^2, where B_k is the contact's Taylor remainder
+coefficient on the enlarged certified radial rectangle. Thus
+
+  u_a = sum_k(P_ak-cmax_a*w_k) h_k
+       <= sum_k(cmax_a*w_k-P_ak) B_k eta_actual^2,
+
+  -u_a = sum_k(cmin_a*w_k-P_ak) h_k
+        <= sum_k(P_ak-cmin_a*w_k) B_k eta_actual^2.
+
+Define K to be the maximum over radial rows of these two coefficient sums.
+Every coefficient sum is bounded above using interval arithmetic, including
+the inverse uncertainty and the stress uncertainty. The checker may clamp an
+interval coefficient upper bound at zero; this is conservative because its
+exact coefficient is nonnegative. The resulting contraction is
+
+  eta_actual <= K*eta_actual^2.
+
+The enlarged profile tolerance is now1/550. Every contact Hessian is freshly
+bounded over that larger radial rectangle; no1/1000 Hessian estimate is reused.
+The effective radius-error bound again directly encloses every delivered safe
+interval using the independent exact candidate evaluation. The exact result is
+
+  K*eta_effective <0.923608452198<1.
+
+If eta_actual>0, dividing by eta_actual gives a contradiction. If eta_actual=0,
+all Taylor remainders vanish and h>=0. Positivity of w and sum w h=0 force
+h=0; PJ=I then fixes all radial and angular changes to zero. Consequently the
+larger radial box also contains only the candidate up to rotation and no
+strictly separated packing.
+
+The new safe ranges use exactly the same verified primary type enclosures
+and the same two canonical maps, with intervals[upper-1/550,lower+1/550].
+The global word remains00100100100101101. Its use still requires actual
+boundary radii exactly q_*, as supplied by maximal-boundary normalization.
+A master verification must rerun the exact checker and its independent audit
+and match freshly regenerated profile data to the main forest. The smaller
+original and1/1000 local boxes are subsets of these new ranges.
