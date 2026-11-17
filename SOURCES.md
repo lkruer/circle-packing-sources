@@ -262,9 +262,8 @@ Supplied by Liam, in the order heard. Titles and artists are as named in the sup
 
 1. *Entering Graciously*
 2. *Space Jazz*, Kevin MacLeod
-3. *Slow 2018*
-4. *Intoxica*, Radiowar, OC ReMix #2549, from Donkey Kong Country 3
-5. *Turning off*, xXxAlExBaLsOnxXx
+3. *Intoxica*, Radiowar, OC ReMix #2549, from Donkey Kong Country 3
+4. *Turning off*, xXxAlExBaLsOnxXx
 
 ## Typography and production
 
